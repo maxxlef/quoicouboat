@@ -33,15 +33,13 @@ Certains fichiers portent des noms inspirés de notre bateau, affectueusement ap
    - **Projection des Coordonnées :** La fonction `inverse_projection()` est utilisée pour transformer les coordonnées de la courbe de Lissajous en latitude et longitude.  
    - **Navigation et Ajustement :** Avec la fonction `info_nav()`, le bateau ajuste sa vitesse et son cap pour suivre le point GPS mobile tout en anticipant sa trajectoire.
 
-9. **`epreuve_4.py`**  
-   Ce fichier implémente la quatrième épreuve : suivre une ligne droite entre deux points GPS sans déviation. Il s'appuie sur les fonctionnalités existantes de `quoicouroblib.py` :  
+9. **`epreuve_4_2.py`**  
+   Ce fichier implémente la quatrième épreuve : suivre une ligne droite entre deux points GPS sans déviation, en particulier pour des trajets plus longs où il y a plusieurs lignes droites. Il s'appuie sur les fonctionnalités existantes de `quoicouroblib.py` :  
    - **Correction de Cap :** La fonction `cap_waypoint_2()` ajuste le cap du bateau en fonction de la distance par rapport à la ligne droite définie.  
    - **Erreur Minimale :** La correction de cap est optimisée par une fonction tangente hyperbolique, minimisant ainsi la déviation du bateau par rapport à la ligne droite cible.
 
-10. **`epreuve_4_2.py`**  
-    Cette variante de l'épreuve 4 vise à améliorer encore la précision du suivi de ligne droite, en particulier pour des trajets plus longs ou avec des conditions environnementales variables :  
-    - **Correction Dynamique :** Utilisation d'une correction dynamique basée sur l'erreur accumulée au fil du temps.  
-    - **Contrôle Avancé des Moteurs :** Ajustements supplémentaires de la vitesse des moteurs pour corriger les écarts, en fonction des conditions actuelles du bateau et de la distance au point GPS final.
+10. **`epreuve_4_1.py`**  
+    Première version de l'épreuve 4 qui permet de suivre une seule ligne droite et s'arrête après 30s une fois que le bateau a passé la bouée.
 
 11. **`tracer_lissajous.py`**  
     Ce script trace la courbe de Lissajous prévue pour la troisième épreuve et permet de visualiser la trajectoire idéale sur un graphique. Il est utilisé pour :  
